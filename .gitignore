@@ -2,3 +2,6 @@
 *.7z
 agribalyse.7z
 agribalyse/*CSV
+*.zip
+agribalyse-3.0.xlsx/*
+*ipynb_checkpoints/*
