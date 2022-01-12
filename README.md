@@ -19,13 +19,13 @@ Note: according to [this person](https://github.com/lou-dupont/Agribalyse/commit
 Inspired by Massimo's import for Exiobase.
 
 
-1. Load all the CSV files as Pandas
-2. Identify all activities and exchanges, and create a dictionnary
-3. Write the dictionnary as bw2 database
-4. Identify products of activities
-5. Add the final prod to existing bw database
-6. Import emissions from another xlsb file
-7. Match emissions with biosphere3 codes (not all of them)
-8. Add the emissions to the existing bw database
-   
-9. Do calculations.
+1. Load all the CSV files as Pandas [done]
+2. Identify all activities & products and create a dictionnary [done]
+>> Issue here: the matrix is not square, there are more products than activities (missing activities can be replaced by dummy activities, hopefully)
+3. Write the dictionnary as bw2 database [done]
+4. Create a correspondance table between bw2's biosphere3 & the biosphere from Agribalyse [partly done, requires help/improvement]
+>> Issue here: not so easy to get a 1-to-1 correspondance between the two, neither automatically, nor manually
+5. Loop on all biosphere & technosphere exchanges, and save exchanges to the database [done]
+>> Issue here: need speed improvement, need handling of issues (missing activities/products)
+6. Do LCA calculations for all products/processes & validate them against implementation in SimaPro or openLCA [not done]
+>> Validation is THE important step!
