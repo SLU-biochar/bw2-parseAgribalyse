@@ -1,15 +1,18 @@
 # Attempt to import Agribalyse to a brightway2 database
 
-## Data source
+## Data source for Agribalyse
 - CSV files from https://www.data.gouv.fr/fr/datasets/agribalyse
 - alternatively from https://nexus.openlca.org/database/Agribalyse 
 
-[the files from data.gouv.fr are the files from the Nexus OpenLCA converted to a more easily readable format, i.e. csv files]
+Note: the files from data.gouv.fr are the files from the Nexus OpenLCA converted to a more easily readable format, i.e. csv files, according to data.gouv.fr
 
 ## CSV file structure 
 
 Tables are explained at https://www.data.gouv.fr/fr/datasets/agribalyse
 More info from the methodology page https://doc.agribalyse.fr/documentation/?cacheBust=1634652873522 
+
+Note: according to [this person](https://github.com/lou-dupont/Agribalyse/commit/eea57713550a883662daaa03a531565223c43306), the table ```TBL_EXCHANGES.csv``` contains 3.5 million lines (one line, for one technosphere or environmental exchange). However, 75% of these are equal to 0 and useless to parse. Saves a lot of time to just filter them out before writing the database to brighway! (discovered at own expenses)
+
 
 ## Procedure
 
